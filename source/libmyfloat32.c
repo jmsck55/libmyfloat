@@ -30,3 +30,8 @@ float fDivide(float a, float b)
 {
     return a / b;
 }
+
+float fNegate(float a)
+{
+    return - a;
+}

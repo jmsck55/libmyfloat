@@ -19,6 +19,7 @@ extern float fAdd(float a, float b);
 extern float fSubtract(float a, float b);
 extern float fMultiply(float a, float b);
 extern float fDivide(float a, float b);
+extern float fNegate(float a);
 
 #ifdef __cplusplus
 }
