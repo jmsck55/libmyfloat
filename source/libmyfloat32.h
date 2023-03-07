@@ -1,3 +1,4 @@
+// Copyright (c) 2023 James Cook
 //
 //  libmyfloat32.h
 //  libmyfloat32
