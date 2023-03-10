@@ -12,9 +12,9 @@ int main()
     a = 1.2;
     b = 3.4;
     
-    c = fAdd(a, b);
+    c = Add(a, b);
     
-    printf("fAdd() returns: %f\n", c);
+    printf("Add() returns: %f\n", c);
     
     return 0;
 }
