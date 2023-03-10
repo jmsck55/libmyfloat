@@ -16,5 +16,11 @@ int main()
     
     printf("Add() returns: %f\n", c);
     
+    a = 1234;
+    b = flog(a);
+    c = fexp(b);
+
+    printf("%f == %f\n", a, c);
+
     return 0;
 }
