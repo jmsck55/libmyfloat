@@ -1,7 +1,8 @@
+# Copyright (c) 2023 James Cook
 
-gcc -c -Wall -Werror -fpic libmyfloat32.c
-gcc -shared -o libmyfloat32.dylib libmyfloat32.o
-gcc -L. -Wall -o main_test main.c -lmyfloat32
+gcc -c -Wall -Werror -fpic libmyfloat.c
+gcc -shared -o libmyfloat.dylib libmyfloat.o
+gcc -L. -Wall -o main_test main.c -lmyfloat
 # You will only need to do this once:
 # export LD_LIBRARY_PATH=$PWD:$LD_LIBRARY_PATH
 ./main_test

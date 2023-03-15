@@ -7,9 +7,12 @@
 //
 
 #include <tgmath.h>
+
+//--here, put in complex functions:
+
 //#include <complex.h>
 
-#include "libmyfloat32.h"
+#include "libmyfloat.h"
 
 float Add(float a, float b)
 {
