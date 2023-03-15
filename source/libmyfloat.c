@@ -14,23 +14,23 @@
 
 #include "libmyfloat.h"
 
-float Add(float a, float b)
+MY_DLL_API float Add(float a, float b)
 {
     return a + b;
 }
-float Subtract(float a, float b)
+MY_DLL_API float Subtract(float a, float b)
 {
     return a - b;
 }
-float Multiply(float a, float b)
+MY_DLL_API float Multiply(float a, float b)
 {
     return a * b;
 }
-float Divide(float a, float b)
+MY_DLL_API float Divide(float a, float b)
 {
     return a / b;
 }
-float Negate(float a)
+MY_DLL_API float Negate(float a)
 {
     return - a;
 }
@@ -39,31 +39,31 @@ float Negate(float a)
 Trigonometric functions
 */
 
-float fcos(float a)
+MY_DLL_API float fcos(float a)
 {
     return cos(a);
 }
-float fsin(float a)
+MY_DLL_API float fsin(float a)
 {
     return sin(a);
 }
-float ftan(float a)
+MY_DLL_API float ftan(float a)
 {
     return tan(a);
 }
-float facos(float a)
+MY_DLL_API float facos(float a)
 {
     return acos(a);
 }
-float fasin(float a)
+MY_DLL_API float fasin(float a)
 {
     return asin(a);
 }
-float fatan(float a)
+MY_DLL_API float fatan(float a)
 {
     return atan(a);
 }
-float fatan2(float a, float b)
+MY_DLL_API float fatan2(float a, float b)
 {
     return atan2(a, b);
 }
@@ -72,27 +72,27 @@ float fatan2(float a, float b)
 Hyperbolic functions
 */
 
-float fcosh(float a)
+MY_DLL_API float fcosh(float a)
 {
     return cosh(a);
 }
-float fsinh(float a)
+MY_DLL_API float fsinh(float a)
 {
     return sinh(a);
 }
-float ftanh(float a)
+MY_DLL_API float ftanh(float a)
 {
     return tanh(a);
 }
-float facosh(float a)
+MY_DLL_API float facosh(float a)
 {
     return acosh(a);
 }
-float fasinh(float a)
+MY_DLL_API float fasinh(float a)
 {
     return asinh(a);
 }
-float fatanh(float a)
+MY_DLL_API float fatanh(float a)
 {
     return atanh(a);
 }
@@ -101,59 +101,59 @@ float fatanh(float a)
 Exponential and logarithmic functions
 */
 
-float fexp(float a)
+MY_DLL_API float fexp(float a)
 {
     return exp(a);
 }
-float ffrexp(float a, int * exp1)
+MY_DLL_API float ffrexp(float a, int * exp1)
 {
     return frexp(a, exp1);
 }
-float fldexp(float a, int exp1)
+MY_DLL_API float fldexp(float a, int exp1)
 {
     return ldexp(a, exp1);
 }
-float flog(float a)
+MY_DLL_API float flog(float a)
 {
     return log(a);
 }
-float flog10(float a)
+MY_DLL_API float flog10(float a)
 {
     return log10(a);
 }
-float modfj(float a, float * intpart)
+MY_DLL_API float modfj(float a, float * intpart)
 {
     return modff(a, intpart);
 }
-float fexp2(float a)
+MY_DLL_API float fexp2(float a)
 {
     return exp2(a);
 }
-float fexpm1(float a)
+MY_DLL_API float fexpm1(float a)
 {
     return expm1(a);
 }
-float filogb(float a)
+MY_DLL_API float filogb(float a)
 {
     return ilogb(a);
 }
-float flog1p(float a)
+MY_DLL_API float flog1p(float a)
 {
     return log1p(a);
 }
-float flog2(float a)
+MY_DLL_API float flog2(float a)
 {
     return log2(a);
 }
-float flogb(float a)
+MY_DLL_API float flogb(float a)
 {
     return logb(a);
 }
-float fscalbnf(float a, int n)
+MY_DLL_API float fscalbnf(float a, int n)
 {
     return scalbnf(a, n);
 }
-float fscalblnf(float a, long int n)
+MY_DLL_API float fscalblnf(float a, long int n)
 {
     return scalblnf(a, n);
 }
@@ -162,19 +162,19 @@ float fscalblnf(float a, long int n)
 Power functions
 */
 
-float fpow(float a, float b)
+MY_DLL_API float fpow(float a, float b)
 {
     return pow(a, b);
 }
-float fsqrt(float a)
+MY_DLL_API float fsqrt(float a)
 {
     return sqrt(a);
 }
-float fcbrt(float a)
+MY_DLL_API float fcbrt(float a)
 {
     return cbrt(a);
 }
-float fhypot(float a, float b)
+MY_DLL_API float fhypot(float a, float b)
 {
     return hypot(a, b);
 }
@@ -183,19 +183,19 @@ float fhypot(float a, float b)
 Error and gamma functions
 */
 
-float ferf(float a)
+MY_DLL_API float ferf(float a)
 {
     return erf(a);
 }
-float ferfc(float a)
+MY_DLL_API float ferfc(float a)
 {
     return erfc(a);
 }
-float ftgamma(float a)
+MY_DLL_API float ftgamma(float a)
 {
     return tgamma(a);
 }
-float flgamma(float a)
+MY_DLL_API float flgamma(float a)
 {
     return lgamma(a);
 }
@@ -204,55 +204,55 @@ float flgamma(float a)
 Rounding and remainder functions
 */
 
-float fceil(float a)
+MY_DLL_API float fceil(float a)
 {
     return ceil(a);
 }
-float ffloor(float a)
+MY_DLL_API float ffloor(float a)
 {
     return floor(a);
 }
-float ffmod(float a, float b)
+MY_DLL_API float ffmod(float a, float b)
 {
     return fmod(a, b);
 }
-float ftrunc(float a)
+MY_DLL_API float ftrunc(float a)
 {
     return trunc(a);
 }
-float fround(float a)
+MY_DLL_API float fround(float a)
 {
     return round(a);
 }
-float flround(float a)
+MY_DLL_API float flround(float a)
 {
     return lround(a);
 }
-float fllround(float a)
+MY_DLL_API float fllround(float a)
 {
     return llround(a);
 }
-float frint(float a)
+MY_DLL_API float frint(float a)
 {
     return rint(a);
 }
-float flrint(float a)
+MY_DLL_API float flrint(float a)
 {
     return lrint(a);
 }
-float fllrint(float a)
+MY_DLL_API float fllrint(float a)
 {
     return llrint(a);
 }
-float fnearbyint(float a)
+MY_DLL_API float fnearbyint(float a)
 {
     return nearbyint(a);
 }
-float fremainder(float a, float b)
+MY_DLL_API float fremainder(float a, float b)
 {
     return remainder(a, b);
 }
-float fremquo(float numer, float denom, int * quot)
+MY_DLL_API float fremquo(float numer, float denom, int * quot)
 {
     return remquo(numer, denom, quot);
 }
@@ -261,19 +261,19 @@ float fremquo(float numer, float denom, int * quot)
 Floating-point manipulation functions
 */
 
-float fcopysign(float x, float y)
+MY_DLL_API float fcopysign(float x, float y)
 {
     return copysign(x, y);
 }
-float fnan(const char* tagp)
+MY_DLL_API float fnan(const char* tagp)
 {
     return nan(tagp);
 }
-float fnextafter(float x, float y)
+MY_DLL_API float fnextafter(float x, float y)
 {
     return nextafterf(x, y);
 }
-float fnexttoward(float x, long double y)
+MY_DLL_API float fnexttoward(float x, long double y)
 {
     return nexttowardf(x, y);
 }
@@ -282,15 +282,15 @@ float fnexttoward(float x, long double y)
 Minimum, maximum, difference functions
 */
 
-float fdimj(float a, float b)
+MY_DLL_API float fdimj(float a, float b)
 {
     return fdim(a, b);
 }
-float fmaxj(float a, float b)
+MY_DLL_API float fmaxj(float a, float b)
 {
     return fmax(a, b);
 }
-float fminj(float a, float b)
+MY_DLL_API float fminj(float a, float b)
 {
     return fmin(a, b);
 }
@@ -299,11 +299,11 @@ float fminj(float a, float b)
 Other functions
 */
 
-float fabsj(float a)
+MY_DLL_API float fabsj(float a)
 {
     return fabs(a);
 }
-float fmaj(float x, float y, float z)
+MY_DLL_API float fmaj(float x, float y, float z)
 {
     return fma(x, y, z);
 }
@@ -312,27 +312,27 @@ float fmaj(float x, float y, float z)
 Classification macro / functions
 */
 
-int fpclassifyj(float a)
+MY_DLL_API int fpclassifyj(float a)
 {
     return fpclassify(a);
 }
-int isfinitej(float a)
+MY_DLL_API int isfinitej(float a)
 {
     return isfinite(a);
 }
-int isinfj(float a)
+MY_DLL_API int isinfj(float a)
 {
     return isinf(a);
 }
-int isnanj(float a)
+MY_DLL_API int isnanj(float a)
 {
     return isnan(a);
 }
-int isnormalj(float a)
+MY_DLL_API int isnormalj(float a)
 {
     return isnormal(a);
 }
-int signbitj(float a)
+MY_DLL_API int signbitj(float a)
 {
     return signbit(a);
 }
@@ -341,27 +341,27 @@ int signbitj(float a)
 Comparison macro / functions
 */
 
-int isgreaterj(float a, float b)
+MY_DLL_API int isgreaterj(float a, float b)
 {
     return (int)isgreater(a, b);
 }
-int isgreaterequalj(float a, float b)
+MY_DLL_API int isgreaterequalj(float a, float b)
 {
     return (int)isgreaterequal(a, b);
 }
-int islessj(float a, float b)
+MY_DLL_API int islessj(float a, float b)
 {
     return (int)isless(a, b);
 }
-int islessequalj(float a, float b)
+MY_DLL_API int islessequalj(float a, float b)
 {
     return (int)islessequal(a, b);
 }
-int islessgreaterj(float a, float b)
+MY_DLL_API int islessgreaterj(float a, float b)
 {
     return (int)islessgreater(a, b);
 }
-int isunorderedj(float a, float b)
+MY_DLL_API int isunorderedj(float a, float b)
 {
     return (int)isunordered(a, b);
 }

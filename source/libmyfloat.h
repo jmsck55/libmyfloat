@@ -9,141 +9,141 @@
 #ifndef libmyfloat32_h
 #define libmyfloat32_h
 
+#include "dllmacros.h"
+
 #ifdef __cplusplus
 extern "C" {
 #endif /* __cplusplus */
 
-//#include <stdio.h>
-
-extern float Add(float a, float b);
-extern float Subtract(float a, float b);
-extern float Multiply(float a, float b);
-extern float Divide(float a, float b);
-extern float Negate(float a);
+MY_DLL_API MY_EXTERN float Add(float a, float b);
+MY_DLL_API MY_EXTERN float Subtract(float a, float b);
+MY_DLL_API MY_EXTERN float Multiply(float a, float b);
+MY_DLL_API MY_EXTERN float Divide(float a, float b);
+MY_DLL_API MY_EXTERN float Negate(float a);
 
 /*
 Trigonometric functions
 */
 
-extern float fcos(float a);
-extern float fsin(float a);
-extern float ftan(float a);
-extern float facos(float a);
-extern float fasin(float a);
-extern float fatan(float a);
-extern float fatan2(float a, float b);
+MY_DLL_API MY_EXTERN float fcos(float a);
+MY_DLL_API MY_EXTERN float fsin(float a);
+MY_DLL_API MY_EXTERN float ftan(float a);
+MY_DLL_API MY_EXTERN float facos(float a);
+MY_DLL_API MY_EXTERN float fasin(float a);
+MY_DLL_API MY_EXTERN float fatan(float a);
+MY_DLL_API MY_EXTERN float fatan2(float a, float b);
 
 /*
 Hyperbolic functions
 */
 
-extern float fcosh(float a);
-extern float fsinh(float a);
-extern float ftanh(float a);
-extern float facosh(float a);
-extern float fasinh(float a);
-extern float fatanh(float a);
+MY_DLL_API MY_EXTERN float fcosh(float a);
+MY_DLL_API MY_EXTERN float fsinh(float a);
+MY_DLL_API MY_EXTERN float ftanh(float a);
+MY_DLL_API MY_EXTERN float facosh(float a);
+MY_DLL_API MY_EXTERN float fasinh(float a);
+MY_DLL_API MY_EXTERN float fatanh(float a);
 
 /*
 Exponential and logarithmic functions
 */
 
-extern float fexp(float a);
-extern float ffrexp(float a, int * exp1);
-extern float fldexp(float a, int exp1);
-extern float flog(float a);
-extern float flog10(float a);
-extern float modfj(float a, float * intpart);
-extern float fexp2(float a);
-extern float fexpm1(float a);
-extern float filogb(float a);
-extern float flog1p(float a);
-extern float flog2(float a);
-extern float flogb(float a);
-extern float fscalbnf(float a, int n);
-extern float fscalblnf(float a, long int n);
+MY_DLL_API MY_EXTERN float fexp(float a);
+MY_DLL_API MY_EXTERN float ffrexp(float a, int * exp1);
+MY_DLL_API MY_EXTERN float fldexp(float a, int exp1);
+MY_DLL_API MY_EXTERN float flog(float a);
+MY_DLL_API MY_EXTERN float flog10(float a);
+MY_DLL_API MY_EXTERN float modfj(float a, float * intpart);
+MY_DLL_API MY_EXTERN float fexp2(float a);
+MY_DLL_API MY_EXTERN float fexpm1(float a);
+MY_DLL_API MY_EXTERN float filogb(float a);
+MY_DLL_API MY_EXTERN float flog1p(float a);
+MY_DLL_API MY_EXTERN float flog2(float a);
+MY_DLL_API MY_EXTERN float flogb(float a);
+MY_DLL_API MY_EXTERN float fscalbnf(float a, int n);
+MY_DLL_API MY_EXTERN float fscalblnf(float a, long int n);
 
 /*
 Power functions
 */
 
-extern float fpow(float a, float b);
-extern float fsqrt(float a);
-extern float fcbrt(float a);
-extern float fhypot(float a, float b);
+MY_DLL_API MY_EXTERN float fpow(float a, float b);
+MY_DLL_API MY_EXTERN float fsqrt(float a);
+MY_DLL_API MY_EXTERN float fcbrt(float a);
+MY_DLL_API MY_EXTERN float fhypot(float a, float b);
 
 /*
 Error and gamma functions
 */
 
-extern float ferf(float a);
-extern float ferfc(float a);
-extern float ftgamma(float a);
-extern float flgamma(float a);
+MY_DLL_API MY_EXTERN float ferf(float a);
+MY_DLL_API MY_EXTERN float ferfc(float a);
+MY_DLL_API MY_EXTERN float ftgamma(float a);
+MY_DLL_API MY_EXTERN float flgamma(float a);
 
 /*
 Rounding and remainder functions
 */
 
-extern float fceil(float a);
-extern float ffloor(float a);
-extern float ffmod(float a, float b);
-extern float ftrunc(float a);
-extern float fround(float a);
-extern float flround(float a);
-extern float fllround(float a);
-extern float frint(float a);
-extern float flrint(float a);
-extern float fllrint(float a);
-extern float fnearbyint(float a);
-extern float fremainder(float a, float b);
-extern float fremquo(float numer, float denom, int * quot);
+MY_DLL_API MY_EXTERN float fceil(float a);
+MY_DLL_API MY_EXTERN float ffloor(float a);
+MY_DLL_API MY_EXTERN float ffmod(float a, float b);
+MY_DLL_API MY_EXTERN float ftrunc(float a);
+MY_DLL_API MY_EXTERN float fround(float a);
+MY_DLL_API MY_EXTERN float flround(float a);
+MY_DLL_API MY_EXTERN float fllround(float a);
+MY_DLL_API MY_EXTERN float frint(float a);
+MY_DLL_API MY_EXTERN float flrint(float a);
+MY_DLL_API MY_EXTERN float fllrint(float a);
+MY_DLL_API MY_EXTERN float fnearbyint(float a);
+MY_DLL_API MY_EXTERN float fremainder(float a, float b);
+MY_DLL_API MY_EXTERN float fremquo(float numer, float denom, int * quot);
 
 /*
 Floating-point manipulation functions
 */
 
-extern float fcopysign(float x, float y);
-extern float fnan(const char* tagp);
-extern float fnextafter(float x, float y);
-extern float fnexttoward(float x, long double y);
+MY_DLL_API MY_EXTERN float fcopysign(float x, float y);
+MY_DLL_API MY_EXTERN float fnan(const char* tagp);
+MY_DLL_API MY_EXTERN float fnextafter(float x, float y);
+MY_DLL_API MY_EXTERN float fnexttoward(float x, long double y);
 
 /*
 Minimum, maximum, difference functions
 */
 
-extern float fdimj(float a, float b);
-extern float fmaxj(float a, float b);
-extern float fminj(float a, float b);
+MY_DLL_API MY_EXTERN float fdimj(float a, float b);
+MY_DLL_API MY_EXTERN float fmaxj(float a, float b);
+MY_DLL_API MY_EXTERN float fminj(float a, float b);
 
 /*
 Other functions
 */
 
-extern float fabsj(float a);
-extern float fmaj(float x, float y, float z);
+MY_DLL_API MY_EXTERN float fabsj(float a);
+MY_DLL_API MY_EXTERN float fmaj(float x, float y, float z);
 
 /*
 Classification macro / functions
 */
 
-extern int fpclassifyj(float a);
-extern int isfinitej(float a);
-extern int isinfj(float a);
-extern int isnanj(float a);
-extern int isnormalj(float a);
-extern int signbitj(float a);
+MY_DLL_API MY_EXTERN int fpclassifyj(float a);
+MY_DLL_API MY_EXTERN int isfinitej(float a);
+MY_DLL_API MY_EXTERN int isinfj(float a);
+MY_DLL_API MY_EXTERN int isnanj(float a);
+MY_DLL_API MY_EXTERN int isnormalj(float a);
+MY_DLL_API MY_EXTERN int signbitj(float a);
 
 /*
 Comparison macro / functions
 */
 
-extern int isgreaterj(float a, float b);
-extern int isgreaterequalj(float a, float b);
-extern int islessj(float a, float b);
-extern int islessequalj(float a, float b);
-extern int islessgreaterj(float a, float b);
-extern int isunorderedj(float a, float b);
+MY_DLL_API MY_EXTERN int isgreaterj(float a, float b);
+MY_DLL_API MY_EXTERN int isgreaterequalj(float a, float b);
+MY_DLL_API MY_EXTERN int islessj(float a, float b);
+MY_DLL_API MY_EXTERN int islessequalj(float a, float b);
+MY_DLL_API MY_EXTERN int islessgreaterj(float a, float b);
+MY_DLL_API MY_EXTERN int isunorderedj(float a, float b);
 
 /*
 Macro constants
