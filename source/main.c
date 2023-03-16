@@ -20,7 +20,7 @@ int main()
     b = flog(a);
     c = fexp(b);
 
-    printf("%f == %f\n", a, c);
+    printf("%f == %f\n", (double)a, (double)c);
 
     return 0;
 }
