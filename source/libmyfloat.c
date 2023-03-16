@@ -8,9 +8,10 @@
 
 #include <tgmath.h>
 
-//--here, put in complex functions:
-
-//#include <complex.h>
+// Complex support for library:
+// https://en.cppreference.com/w/c
+// https://en.cppreference.com/w/c/numeric/tgmath
+// https://en.cppreference.com/w/c/numeric/complex
 
 #include "libmyfloat.h"
 
