@@ -1,9 +1,11 @@
 // Copyright (c) 2023 James Cook
 //
-//  libmyfloat32.h
-//  libmyfloat32
+//  libmyfloat.h
+//  libmyfloat
 //
 //  Created by James Cook on 3/6/23.
+//
+//  Header file for libmyfloat.c
 //
 
 #ifndef libmyfloat32_h
@@ -11,117 +13,207 @@
 
 #include "dllmacros.h"
 
+// Code for "C" library:
+
 #ifdef __cplusplus
 extern "C" {
 #endif /* __cplusplus */
 
-MY_DLL_API MY_EXTERN float Add(float a, float b);
-MY_DLL_API MY_EXTERN float Subtract(float a, float b);
-MY_DLL_API MY_EXTERN float Multiply(float a, float b);
-MY_DLL_API MY_EXTERN float Divide(float a, float b);
-MY_DLL_API MY_EXTERN float Negate(float a);
 
-/*
-Trigonometric functions
-*/
+// Simple arithmetic:
 
-MY_DLL_API MY_EXTERN float fcos(float a);
-MY_DLL_API MY_EXTERN float fsin(float a);
-MY_DLL_API MY_EXTERN float ftan(float a);
-MY_DLL_API MY_EXTERN float facos(float a);
-MY_DLL_API MY_EXTERN float fasin(float a);
-MY_DLL_API MY_EXTERN float fatan(float a);
-MY_DLL_API MY_EXTERN float fatan2(float a, float b);
+MY_DLL_API MY_EXTERN float kaddf(float a, float b);
+MY_DLL_API MY_EXTERN float ksubtractf(float a, float b);
+MY_DLL_API MY_EXTERN float kmultiplyf(float a, float b);
+MY_DLL_API MY_EXTERN float kdividef(float a, float b);
+MY_DLL_API MY_EXTERN float knegatef(float a);
 
-/*
-Hyperbolic functions
-*/
+MY_DLL_API MY_EXTERN double kadd(double a, double b);
+MY_DLL_API MY_EXTERN double ksubtract(double a, double b);
+MY_DLL_API MY_EXTERN double kmultiply(double a, double b);
+MY_DLL_API MY_EXTERN double kdivide(double a, double b);
+MY_DLL_API MY_EXTERN double knegate(double a, double b);
 
-MY_DLL_API MY_EXTERN float fcosh(float a);
-MY_DLL_API MY_EXTERN float fsinh(float a);
-MY_DLL_API MY_EXTERN float ftanh(float a);
-MY_DLL_API MY_EXTERN float facosh(float a);
-MY_DLL_API MY_EXTERN float fasinh(float a);
-MY_DLL_API MY_EXTERN float fatanh(float a);
+MY_DLL_API MY_EXTERN float kcaddf(float *dst, float areal, float aimag, float breal, float bimag);
+MY_DLL_API MY_EXTERN float kcsubtractf(float *dst, float areal, float aimag, float breal, float bimag);
+MY_DLL_API MY_EXTERN float kcmultiplyf(float *dst, float areal, float aimag, float breal, float bimag);
+MY_DLL_API MY_EXTERN float kcdividef(float *dst, float areal, float aimag, float breal, float bimag);
+MY_DLL_API MY_EXTERN float kcnegatef(float *dst, float areal, float aimag, float breal, float bimag);
 
-/*
-Exponential and logarithmic functions
-*/
+MY_DLL_API MY_EXTERN double kcadd(double *dst, double areal, double aimag, double breal, double bimag);
+MY_DLL_API MY_EXTERN double kcsubtract(double *dst, double areal, double aimag, double breal, double bimag);
+MY_DLL_API MY_EXTERN double kcmultiply(double *dst, double areal, double aimag, double breal, double bimag);
+MY_DLL_API MY_EXTERN double kcdivide(double *dst, double areal, double aimag, double breal, double bimag);
+MY_DLL_API MY_EXTERN double kcnegate(double *dst, double areal, double aimag, double breal, double bimag);
 
-MY_DLL_API MY_EXTERN float fexp(float a);
-MY_DLL_API MY_EXTERN float ffrexp(float a, int * exp1);
-MY_DLL_API MY_EXTERN float fldexp(float a, int exp1);
-MY_DLL_API MY_EXTERN float flog(float a);
-MY_DLL_API MY_EXTERN float flog10(float a);
-MY_DLL_API MY_EXTERN float modfj(float a, float * intpart);
-MY_DLL_API MY_EXTERN float fexp2(float a);
-MY_DLL_API MY_EXTERN float fexpm1(float a);
-MY_DLL_API MY_EXTERN float filogb(float a);
-MY_DLL_API MY_EXTERN float flog1p(float a);
-MY_DLL_API MY_EXTERN float flog2(float a);
-MY_DLL_API MY_EXTERN float flogb(float a);
-MY_DLL_API MY_EXTERN float fscalbnf(float a, int n);
-MY_DLL_API MY_EXTERN float fscalblnf(float a, long int n);
+// Complex/real type-generic macros
 
-/*
-Power functions
-*/
+MY_DLL_API MY_EXTERN float kfabsf(float a);
+MY_DLL_API MY_EXTERN float kexpf(float a);
+MY_DLL_API MY_EXTERN float klogf(float a);
+MY_DLL_API MY_EXTERN float kpowf(float a, float b);
+MY_DLL_API MY_EXTERN float ksqrtf(float a);
+MY_DLL_API MY_EXTERN float ksinf(float a);
+MY_DLL_API MY_EXTERN float kcosf(float a);
+MY_DLL_API MY_EXTERN float ktanf(float a);
+MY_DLL_API MY_EXTERN float kasinf(float a);
+MY_DLL_API MY_EXTERN float kacosf(float a);
+MY_DLL_API MY_EXTERN float katanf(float a);
+MY_DLL_API MY_EXTERN float ksinhf(float a);
+MY_DLL_API MY_EXTERN float kcoshf(float a);
+MY_DLL_API MY_EXTERN float ktanhf(float a);
+MY_DLL_API MY_EXTERN float kasinhf(float a);
+MY_DLL_API MY_EXTERN float kacoshf(float a);
+MY_DLL_API MY_EXTERN float katanhf(float a);
 
-MY_DLL_API MY_EXTERN float fpow(float a, float b);
-MY_DLL_API MY_EXTERN float fsqrt(float a);
-MY_DLL_API MY_EXTERN float fcbrt(float a);
-MY_DLL_API MY_EXTERN float fhypot(float a, float b);
+MY_DLL_API MY_EXTERN double kfabs(double a);
+MY_DLL_API MY_EXTERN double kexp(double a);
+MY_DLL_API MY_EXTERN double klog(double a);
+MY_DLL_API MY_EXTERN double kpow(double a, double b);
+MY_DLL_API MY_EXTERN double ksqrt(double a);
+MY_DLL_API MY_EXTERN double ksin(double a);
+MY_DLL_API MY_EXTERN double kcos(double a);
+MY_DLL_API MY_EXTERN double ktan(double a);
+MY_DLL_API MY_EXTERN double kasin(double a);
+MY_DLL_API MY_EXTERN double kacos(double a);
+MY_DLL_API MY_EXTERN double katan(double a);
+MY_DLL_API MY_EXTERN double ksinh(double a);
+MY_DLL_API MY_EXTERN double kcosh(double a);
+MY_DLL_API MY_EXTERN double ktanh(double a);
+MY_DLL_API MY_EXTERN double kasinh(double a);
+MY_DLL_API MY_EXTERN double kacosh(double a);
+MY_DLL_API MY_EXTERN double katanh(double a);
 
-/*
-Error and gamma functions
-*/
+MY_DLL_API MY_EXTERN float kcabsf(float *dst, float areal, float aimag);
+MY_DLL_API MY_EXTERN float kcexpf(float *dst, float areal, float aimag);
+MY_DLL_API MY_EXTERN float kclogf(float *dst, float areal, float aimag);
+MY_DLL_API MY_EXTERN float kcpowf(float *dst, float areal, float aimag, float breal, float bimag);
+MY_DLL_API MY_EXTERN float kcsqrtf(float *dst, float areal, float aimag);
+MY_DLL_API MY_EXTERN float kcsinf(float *dst, float areal, float aimag);
+MY_DLL_API MY_EXTERN float kccosf(float *dst, float areal, float aimag);
+MY_DLL_API MY_EXTERN float kctanf(float *dst, float areal, float aimag);
+MY_DLL_API MY_EXTERN float kcasinf(float *dst, float areal, float aimag);
+MY_DLL_API MY_EXTERN float kcacosf(float *dst, float areal, float aimag);
+MY_DLL_API MY_EXTERN float kcatanf(float *dst, float areal, float aimag);
+MY_DLL_API MY_EXTERN float kcsinhf(float *dst, float areal, float aimag);
+MY_DLL_API MY_EXTERN float kccoshf(float *dst, float areal, float aimag);
+MY_DLL_API MY_EXTERN float kctanhf(float *dst, float areal, float aimag);
+MY_DLL_API MY_EXTERN float kcasinhf(float *dst, float areal, float aimag);
+MY_DLL_API MY_EXTERN float kcacoshf(float *dst, float areal, float aimag);
+MY_DLL_API MY_EXTERN float kcatanhf(float *dst, float areal, float aimag);
 
-MY_DLL_API MY_EXTERN float ferf(float a);
-MY_DLL_API MY_EXTERN float ferfc(float a);
-MY_DLL_API MY_EXTERN float ftgamma(float a);
-MY_DLL_API MY_EXTERN float flgamma(float a);
+MY_DLL_API MY_EXTERN double kcabs(double *dst, double areal, double aimag);
+MY_DLL_API MY_EXTERN double kcexp(double *dst, double areal, double aimag);
+MY_DLL_API MY_EXTERN double kclog(double *dst, double areal, double aimag);
+MY_DLL_API MY_EXTERN double kcpow(double *dst, double areal, double aimag, double breal, double bimag);
+MY_DLL_API MY_EXTERN double kcsqrt(double *dst, double areal, double aimag);
+MY_DLL_API MY_EXTERN double kcsin(double *dst, double areal, double aimag);
+MY_DLL_API MY_EXTERN double kccos(double *dst, double areal, double aimag);
+MY_DLL_API MY_EXTERN double kctan(double *dst, double areal, double aimag);
+MY_DLL_API MY_EXTERN double kcasin(double *dst, double areal, double aimag);
+MY_DLL_API MY_EXTERN double kcacos(double *dst, double areal, double aimag);
+MY_DLL_API MY_EXTERN double kcatan(double *dst, double areal, double aimag);
+MY_DLL_API MY_EXTERN double kcsinh(double *dst, double areal, double aimag);
+MY_DLL_API MY_EXTERN double kccosh(double *dst, double areal, double aimag);
+MY_DLL_API MY_EXTERN double kctanh(double *dst, double areal, double aimag);
+MY_DLL_API MY_EXTERN double kcasinh(double *dst, double areal, double aimag);
+MY_DLL_API MY_EXTERN double kcacosh(double *dst, double areal, double aimag);
+MY_DLL_API MY_EXTERN double kcatanh(double *dst, double areal, double aimag);
 
-/*
-Rounding and remainder functions
-*/
+// REAL Only functions:
 
-MY_DLL_API MY_EXTERN float fceil(float a);
-MY_DLL_API MY_EXTERN float ffloor(float a);
-MY_DLL_API MY_EXTERN float ffmod(float a, float b);
-MY_DLL_API MY_EXTERN float ftrunc(float a);
-MY_DLL_API MY_EXTERN float fround(float a);
-MY_DLL_API MY_EXTERN float flround(float a);
-MY_DLL_API MY_EXTERN float fllround(float a);
-MY_DLL_API MY_EXTERN float frint(float a);
-MY_DLL_API MY_EXTERN float flrint(float a);
-MY_DLL_API MY_EXTERN float fllrint(float a);
-MY_DLL_API MY_EXTERN float fnearbyint(float a);
-MY_DLL_API MY_EXTERN float fremainder(float a, float b);
-MY_DLL_API MY_EXTERN float fremquo(float numer, float denom, int * quot);
+MY_DLL_API MY_EXTERN float katan2f(float a, float b);
+MY_DLL_API MY_EXTERN float kcbrtf(float a);
+MY_DLL_API MY_EXTERN float kceilf(float a);
+MY_DLL_API MY_EXTERN float kcopysignf(float a, float b);
+MY_DLL_API MY_EXTERN float kerff(float a);
+MY_DLL_API MY_EXTERN float kerfcf(float a);
+MY_DLL_API MY_EXTERN float kexp2f(float a);
+MY_DLL_API MY_EXTERN float kexpm1f(float a);
+MY_DLL_API MY_EXTERN float kfdimf(float a, float b);
+MY_DLL_API MY_EXTERN float kfloorf(float a);
+MY_DLL_API MY_EXTERN float kfmaf(float a, float b, float c);
+MY_DLL_API MY_EXTERN float kfmaxf(float a, float b);
+MY_DLL_API MY_EXTERN float kfminf(float a, float b);
+MY_DLL_API MY_EXTERN float kfmodf(float a, float b);
+MY_DLL_API MY_EXTERN float kfrexpf(float a, int *idst);
+MY_DLL_API MY_EXTERN float khypotf(float a, float b);
+MY_DLL_API MY_EXTERN int kilogbf(float a);
+MY_DLL_API MY_EXTERN float kldexpf(float a, int i);
+MY_DLL_API MY_EXTERN float klgammaf(float a);
+MY_DLL_API MY_EXTERN long long kllrintf(float a);
+MY_DLL_API MY_EXTERN long long kllroundf(float a);
+MY_DLL_API MY_EXTERN float klog10f(float a);
+MY_DLL_API MY_EXTERN float klog1pf(float a);
+MY_DLL_API MY_EXTERN float klog2f(float a);
+MY_DLL_API MY_EXTERN float klogbf(float a);
+MY_DLL_API MY_EXTERN long klrintf(float a);
+MY_DLL_API MY_EXTERN long klroundf(float a);
+MY_DLL_API MY_EXTERN float knearbyintf(float a);
+MY_DLL_API MY_EXTERN float knextafterf(float a, float b);
+MY_DLL_API MY_EXTERN float knexttowardf(float a, long double ld);
+MY_DLL_API MY_EXTERN float kremainderf(float a, float b);
+MY_DLL_API MY_EXTERN float kremquof(float a, float b, int *idst);
+MY_DLL_API MY_EXTERN float krintf(float a);
+MY_DLL_API MY_EXTERN float kroundf(float a);
+MY_DLL_API MY_EXTERN float kscalblnf(float a, long il);
+MY_DLL_API MY_EXTERN float kscalbnf(float a, int i);
+MY_DLL_API MY_EXTERN float ktgammaf(float a);
+MY_DLL_API MY_EXTERN float ktruncf(float a);
 
-/*
-Floating-point manipulation functions
-*/
+MY_DLL_API MY_EXTERN double katan2(double a, double b);
+MY_DLL_API MY_EXTERN double kcbrt(double a);
+MY_DLL_API MY_EXTERN double kceil(double a);
+MY_DLL_API MY_EXTERN double kcopysign(double a, double b);
+MY_DLL_API MY_EXTERN double kerf(double a);
+MY_DLL_API MY_EXTERN double kerfc(double a);
+MY_DLL_API MY_EXTERN double kexp2(double a);
+MY_DLL_API MY_EXTERN double kexpm1(double a);
+MY_DLL_API MY_EXTERN double kfdim(double a, double b);
+MY_DLL_API MY_EXTERN double kfloor(double a);
+MY_DLL_API MY_EXTERN double kfma(double a, double b, double c);
+MY_DLL_API MY_EXTERN double kfmax(double a, double b);
+MY_DLL_API MY_EXTERN double kfmin(double a, double b);
+MY_DLL_API MY_EXTERN double kfmod(double a, double b);
+MY_DLL_API MY_EXTERN double kfrexp(double a, int *idst);
+MY_DLL_API MY_EXTERN double khypot(double a, double b);
+MY_DLL_API MY_EXTERN int kilogb(double a);
+MY_DLL_API MY_EXTERN double kldexp(double a, int i);
+MY_DLL_API MY_EXTERN double klgamma(double a);
+MY_DLL_API MY_EXTERN long long kllrint(double a);
+MY_DLL_API MY_EXTERN long long kllround(double a);
+MY_DLL_API MY_EXTERN double klog10(double a);
+MY_DLL_API MY_EXTERN double klog1p(double a);
+MY_DLL_API MY_EXTERN double klog2(double a);
+MY_DLL_API MY_EXTERN double klogb(double a);
+MY_DLL_API MY_EXTERN long klrint(double a);
+MY_DLL_API MY_EXTERN long klround(double a);
+MY_DLL_API MY_EXTERN double knearbyint(double a);
+MY_DLL_API MY_EXTERN double knextafter(double a, double b);
+MY_DLL_API MY_EXTERN double knexttoward(double a, long double ld);
+MY_DLL_API MY_EXTERN double kremainder(double a, double b);
+MY_DLL_API MY_EXTERN double kremquo(double a, double b, int *idst);
+MY_DLL_API MY_EXTERN double krint(double a);
+MY_DLL_API MY_EXTERN double kround(double a);
+MY_DLL_API MY_EXTERN double kscalbln(double a, long il);
+MY_DLL_API MY_EXTERN double kscalbn(double a, int i);
+MY_DLL_API MY_EXTERN double ktgamma(double a);
+MY_DLL_API MY_EXTERN double ktrunc(double a);
 
-MY_DLL_API MY_EXTERN float fcopysign(float x, float y);
-MY_DLL_API MY_EXTERN float fnan(const char* tagp);
-MY_DLL_API MY_EXTERN float fnextafter(float x, float y);
-MY_DLL_API MY_EXTERN float fnexttoward(float x, long double y);
+// Complex Only functions:
 
-/*
-Minimum, maximum, difference functions
-*/
+MY_DLL_API MY_EXTERN float kcargf(float *dst, float areal, float aimag);
+MY_DLL_API MY_EXTERN float kconjf(float *dst, float areal, float aimag);
+MY_DLL_API MY_EXTERN float kcrealf(float *dst, float areal, float aimag);
+MY_DLL_API MY_EXTERN float kcimagf(float *dst, float areal, float aimag);
+MY_DLL_API MY_EXTERN float kcprojf(float *dst, float areal, float aimag);
 
-MY_DLL_API MY_EXTERN float fdimj(float a, float b);
-MY_DLL_API MY_EXTERN float fmaxj(float a, float b);
-MY_DLL_API MY_EXTERN float fminj(float a, float b);
+MY_DLL_API MY_EXTERN double kcarg(double *dst, double areal, double aimag);
+MY_DLL_API MY_EXTERN double kconj(double *dst, double areal, double aimag);
+MY_DLL_API MY_EXTERN double kcreal(double *dst, double areal, double aimag);
+MY_DLL_API MY_EXTERN double kcimag(double *dst, double areal, double aimag);
+MY_DLL_API MY_EXTERN double kcproj(double *dst, double areal, double aimag);
 
-/*
-Other functions
-*/
-
-MY_DLL_API MY_EXTERN float fabsj(float a);
-MY_DLL_API MY_EXTERN float fmaj(float x, float y, float z);
 
 /*
 Classification macro / functions

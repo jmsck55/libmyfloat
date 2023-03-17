@@ -12,13 +12,13 @@ int main()
     a = 1.2;
     b = 3.4;
     
-    c = Add(a, b);
+    c = kaddf(a, b);
     
-    printf("Add() returns: %f\n", c);
+    printf("kaddf() returns: %f\n", c);
     
     a = 1234;
-    b = flog(a);
-    c = fexp(b);
+    b = klogf(a);
+    c = kexpf(b);
 
     printf("%f == %f\n", (double)a, (double)c);
 
