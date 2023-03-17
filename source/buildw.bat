@@ -1,7 +1,7 @@
 rem Copyright (c) 2023 James Cook
 rem uses cl.exe from https://visualstudio.microsoft.com
 rem Compile without dll:
-cl libmyfloat.c main.c
+cl main.c libmyfloat.c
 main.exe
 pause
 rem Compile with dll:
