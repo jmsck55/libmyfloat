@@ -14,19 +14,16 @@
 #include <math.h>
 #include <complex.h>
 
+#include "libmyfloat.h"
+
+// Macros for Complex data types:
+
 #ifndef CMPLX
 #define CMPLX(x, y) ((double complex)((double)(x) + I * (double)(y)))
 #endif
 #ifndef CMPLXF
 #define CMPLXF(x, y) ((float complex)((float)(x) + I * (float)(y)))
 #endif
-
-#include "libmyfloat.h"
-
-// Macros for Complex data types:
-
-// CMPLX(x, y) // double, defined in libmyfloat.h
-// CMPLXF(x, y) // float, defined in libmyfloat.h
 
 // double kcadd(double *dst, double areal, double aimag, double breal, double bimag)
 // {
@@ -47,27 +44,31 @@
 //      return cimagf(a);
 // }
 
-#define KC_MACRO_2F(OP) float complex a, b, c; \
+#define KC_MACRO_2F(OP) \
+    float complex a, b, c; \
     a = CMPLXF(areal, aimag); \
     b = CMPLXF(breal, bimag); \
     c = OP(a, b); \
     (*dst) = crealf(c); \
     return cimagf(c)
 
-#define KC_MACRO_2(OP) double complex a, b, c; \
+#define KC_MACRO_2(OP) \
+    double complex a, b, c; \
     a = CMPLX(areal, aimag); \
     b = CMPLX(breal, bimag); \
     c = OP(a, b); \
     (*dst) = creal(c); \
     return cimag(c)
 
-#define KC_MACRO_1F(OP) float complex a, c; \
+#define KC_MACRO_1F(OP) \
+    float complex a, c; \
     a = CMPLXF(areal, aimag); \
     c = OP(a); \
     (*dst) = crealf(c); \
     return cimagf(c)
 
-#define KC_MACRO_1(OP) double complex a, c; \
+#define KC_MACRO_1(OP) \
+    double complex a, c; \
     a = CMPLX(areal, aimag); \
     c = OP(a); \
     (*dst) = creal(c); \

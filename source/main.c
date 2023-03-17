@@ -21,6 +21,8 @@ int main()
     c = kexpf(b);
 
     printf("%f == %f\n", (double)a, (double)c);
+    puts("Press Enter to continue.\n");
+    if (getc(stdin));
 
     return 0;
 }
