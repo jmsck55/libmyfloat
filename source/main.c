@@ -3,8 +3,6 @@
 //#include <stdlib.h>
 #include <stdio.h>
 
-// Use two (2) libraries, one for math.h, and one for complex.h
-
 #include "libmyfloat.h"
 
 int main()
@@ -24,7 +22,7 @@ int main()
 
     printf("%f == %f\n", (double)a, (double)c);
     puts("Press Enter to continue.\n");
-    if (getc(stdin));
+    if (getc(stdin)) {}
 
     return 0;
 }
