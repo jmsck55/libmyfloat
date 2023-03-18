@@ -7,6 +7,10 @@ gcc -shared -o libmyfloat.dll libmyfloat.o
 gcc -c -Wall -Werror -fpic libmycomplex.c
 gcc -shared -o libmycomplex.dll libmycomplex.o
 
-gcc -L. -Wall -o main_test.exe main.c -lmyfloat -lmycomplex
-main_test.exe
+gcc -L. -Wall -o test_main.exe main.c -lmyfloat
+test_main.exe
+pause
+
+gcc -L. -Wall -o test_complex.exe complex_main.c -lmyfloat -lmycomplex
+test_complex.exe
 pause
