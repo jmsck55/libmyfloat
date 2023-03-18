@@ -157,23 +157,37 @@ MY_DLL_API MY_EXTERN double ktrunc(double a);
 Classification macro / functions
 */
 
-MY_DLL_API MY_EXTERN int fpclassifyj(float a);
-MY_DLL_API MY_EXTERN int isfinitej(float a);
-MY_DLL_API MY_EXTERN int isinfj(float a);
-MY_DLL_API MY_EXTERN int isnanj(float a);
-MY_DLL_API MY_EXTERN int isnormalj(float a);
-MY_DLL_API MY_EXTERN int signbitj(float a);
+MY_DLL_API MY_EXTERN int kfpclassifyf(float a);
+MY_DLL_API MY_EXTERN int kisfinitef(float a);
+MY_DLL_API MY_EXTERN int kisinff(float a);
+MY_DLL_API MY_EXTERN int kisnanf(float a);
+MY_DLL_API MY_EXTERN int kisnormalf(float a);
+MY_DLL_API MY_EXTERN int ksignbitf(float a);
+
+MY_DLL_API MY_EXTERN int kfpclassify(double a);
+MY_DLL_API MY_EXTERN int kisfinite(double a);
+MY_DLL_API MY_EXTERN int kisinf(double a);
+MY_DLL_API MY_EXTERN int kisnan(double a);
+MY_DLL_API MY_EXTERN int kisnormal(double a);
+MY_DLL_API MY_EXTERN int ksignbit(double a);
 
 /*
 Comparison macro / functions
 */
 
-MY_DLL_API MY_EXTERN int isgreaterj(float a, float b);
-MY_DLL_API MY_EXTERN int isgreaterequalj(float a, float b);
-MY_DLL_API MY_EXTERN int islessj(float a, float b);
-MY_DLL_API MY_EXTERN int islessequalj(float a, float b);
-MY_DLL_API MY_EXTERN int islessgreaterj(float a, float b);
-MY_DLL_API MY_EXTERN int isunorderedj(float a, float b);
+MY_DLL_API MY_EXTERN int kisgreaterf(float a, float b);
+MY_DLL_API MY_EXTERN int kisgreaterequalf(float a, float b);
+MY_DLL_API MY_EXTERN int kislessf(float a, float b);
+MY_DLL_API MY_EXTERN int kislessequalf(float a, float b);
+MY_DLL_API MY_EXTERN int kislessgreaterf(float a, float b);
+MY_DLL_API MY_EXTERN int kisunorderedf(float a, float b);
+
+MY_DLL_API MY_EXTERN int kisgreater(double a, double b);
+MY_DLL_API MY_EXTERN int kisgreaterequal(double a, double b);
+MY_DLL_API MY_EXTERN int kisless(double a, double b);
+MY_DLL_API MY_EXTERN int kislessequal(double a, double b);
+MY_DLL_API MY_EXTERN int kislessgreater(double a, double b);
+MY_DLL_API MY_EXTERN int kisunordered(double a, double b);
 
 /*
 Macro constants

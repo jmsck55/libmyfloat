@@ -150,59 +150,37 @@ MY_DLL_API double ktrunc(double a) { return trunc(a); }
 Classification macro / functions
 */
 
-MY_DLL_API int fpclassifyj(float a)
-{
-    return (int)fpclassify(a);
-}
-MY_DLL_API int isfinitej(float a)
-{
-    return (int)isfinite(a);
-}
-MY_DLL_API int isinfj(float a)
-{
-    return (int)isinf(a);
-}
-MY_DLL_API int isnanj(float a)
-{
-    return (int)isnan(a);
-}
-MY_DLL_API int isnormalj(float a)
-{
-    return (int)isnormal(a);
-}
-MY_DLL_API int signbitj(float a)
-{
-    return (int)signbit(a);
-}
+MY_DLL_API int kfpclassifyf(float a) { return (int)fpclassify(a); }
+MY_DLL_API int kisfinitef(float a) { return (int)isfinite(a); }
+MY_DLL_API int kisinff(float a) { return (int)isinf(a); }
+MY_DLL_API int kisnanf(float a) { return (int)isnan(a); }
+MY_DLL_API int kisnormalf(float a) { return (int)isnormal(a); }
+MY_DLL_API int ksignbitf(float a) { return (int)signbit(a); }
+
+MY_DLL_API int kfpclassify(double a) { return (int)fpclassify(a); }
+MY_DLL_API int kisfinite(double a) { return (int)isfinite(a); }
+MY_DLL_API int kisinf(double a) { return (int)isinf(a); }
+MY_DLL_API int kisnan(double a) { return (int)isnan(a); }
+MY_DLL_API int kisnormal(double a) { return (int)isnormal(a); }
+MY_DLL_API int ksignbit(double a) { return (int)signbit(a); }
 
 /*
 Comparison macro / functions
 */
 
-MY_DLL_API int isgreaterj(float a, float b)
-{
-    return (int)isgreater(a, b);
-}
-MY_DLL_API int isgreaterequalj(float a, float b)
-{
-    return (int)isgreaterequal(a, b);
-}
-MY_DLL_API int islessj(float a, float b)
-{
-    return (int)isless(a, b);
-}
-MY_DLL_API int islessequalj(float a, float b)
-{
-    return (int)islessequal(a, b);
-}
-MY_DLL_API int islessgreaterj(float a, float b)
-{
-    return (int)islessgreater(a, b);
-}
-MY_DLL_API int isunorderedj(float a, float b)
-{
-    return (int)isunordered(a, b);
-}
+MY_DLL_API int kisgreaterf(float a, float b) { return (int)isgreater(a, b); }
+MY_DLL_API int kisgreaterequalf(float a, float b) { return (int)isgreaterequal(a, b); }
+MY_DLL_API int kislessf(float a, float b) { return (int)isless(a, b); }
+MY_DLL_API int kislessequalf(float a, float b) { return (int)islessequal(a, b); }
+MY_DLL_API int kislessgreaterf(float a, float b) { return (int)islessgreater(a, b); }
+MY_DLL_API int kisunorderedf(float a, float b) { return (int)isunordered(a, b); }
+
+MY_DLL_API int kisgreater(double a, double b) { return (int)isgreater(a, b); }
+MY_DLL_API int kisgreaterequal(double a, double b) { return (int)isgreaterequal(a, b); }
+MY_DLL_API int kisless(double a, double b) { return (int)isless(a, b); }
+MY_DLL_API int kislessequal(double a, double b) { return (int)islessequal(a, b); }
+MY_DLL_API int kislessgreater(double a, double b) { return (int)islessgreater(a, b); }
+MY_DLL_API int kisunordered(double a, double b) { return (int)isunordered(a, b); }
 
 /*
 Macro constants
