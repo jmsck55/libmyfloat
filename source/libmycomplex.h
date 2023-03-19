@@ -13,6 +13,18 @@
 
 #include "dllmacros.h"
 
+// Useful typedef's:
+
+typedef struct {
+	float real;
+	float imag;
+} Complexf;
+
+typedef struct {
+	double real;
+	double imag;
+} Complex;
+
 // Code for "C" library:
 
 #ifdef __cplusplus

@@ -5,16 +5,6 @@
 
 #include "libmycomplex.h"
 
-typedef struct {
-    float real;
-    float imag;
-} Complexf;
-
-typedef struct {
-    double real;
-    double imag;
-} Complex;
-
 int main()
 {
     Complexf af, bf; //, cf, df;
