@@ -9,8 +9,9 @@
 // https://en.cppreference.com/w/c
 // https://en.cppreference.com/w/c/numeric/math
 
-
 #include <math.h>
+#include <stdlib.h>
+#include <stdio.h>
 
 #include "libmyfloat.h"
 
@@ -181,6 +182,17 @@ MY_DLL_API int kisless(double a, double b) { return (int)isless(a, b); }
 MY_DLL_API int kislessequal(double a, double b) { return (int)islessequal(a, b); }
 MY_DLL_API int kislessgreater(double a, double b) { return (int)islessgreater(a, b); }
 MY_DLL_API int kisunordered(double a, double b) { return (int)isunordered(a, b); }
+
+// From String, to float or double:
+// "endptr" can be NULL (0).
+
+MY_DLL_API float kstrtof(const char * str, char ** endptr) { return strtof(str, endptr); }
+MY_DLL_API double kstrtod(const char * str, char ** endptr) { return strtod(str, endptr); }
+
+// To String, from float or double:
+
+MY_DLL_API void ksnprintff(char * buffer, size_t sizeOfBuffer, const char * format, float a) { return snprintf(buffer, sizeOfBuffer, format, a); }
+MY_DLL_API void ksnprintfd(char * buffer, size_t sizeOfBuffer, const char * format, double a) { return snprintf(buffer, sizeOfBuffer, format, a); }
 
 /*
 Macro constants

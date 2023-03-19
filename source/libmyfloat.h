@@ -189,6 +189,17 @@ MY_DLL_API MY_EXTERN int kislessequal(double a, double b);
 MY_DLL_API MY_EXTERN int kislessgreater(double a, double b);
 MY_DLL_API MY_EXTERN int kisunordered(double a, double b);
 
+// From String, to float or double:
+// "endptr" can be NULL (0).
+
+MY_DLL_API MY_EXTERN float kstrtof(const char * str, char ** endptr);
+MY_DLL_API MY_EXTERN double kstrtod(const char * str, char ** endptr);
+
+// To String, from float or double:
+
+MY_DLL_API MY_EXTERN void ksnprintff(char * buffer, size_t sizeOfBuffer, const char * format, float a);
+MY_DLL_API MY_EXTERN void ksnprintfd(char * buffer, size_t sizeOfBuffer, const char * format, double a);
+
 /*
 Macro constants
 
