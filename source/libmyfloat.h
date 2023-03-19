@@ -11,6 +11,8 @@
 #ifndef libmyfloat_h
 #define libmyfloat_h
 
+#include <stddef.h>
+
 #include "dllmacros.h"
 
 // Code for "C" library:
@@ -197,8 +199,8 @@ MY_DLL_API MY_EXTERN double kstrtod(const char * str, char ** endptr);
 
 // To String, from float or double:
 
-MY_DLL_API MY_EXTERN void ksnprintff(char * buffer, size_t sizeOfBuffer, const char * format, float a);
-MY_DLL_API MY_EXTERN void ksnprintfd(char * buffer, size_t sizeOfBuffer, const char * format, double a);
+MY_DLL_API MY_EXTERN int ksnprintff(char * buffer, size_t sizeOfBuffer, const char * format, float a);
+MY_DLL_API MY_EXTERN int ksnprintfd(char * buffer, size_t sizeOfBuffer, const char * format, double a);
 
 /*
 Macro constants
