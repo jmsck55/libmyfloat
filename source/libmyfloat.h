@@ -15,7 +15,7 @@
 
 #include "dllmacros.h"
 
-#define FLOAT_VERSION 1LL
+#define FLOAT_VERSION 2LL
 
 // Code for "C" library:
 
