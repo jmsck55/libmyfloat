@@ -28,24 +28,30 @@ MY_DLL_API long long ComplexVersion()
 #define CMPLXF(x, y) ((float complex)((float)(x) + I * (float)(y)))
 #endif
 
-// double kcadd(double *dst, double areal, double aimag, double breal, double bimag)
-// {
-//      double complex a, b;
-//      a = CMPLX(areal, aimag);
-//      b = CMPLX(breal, bimag);
-//      a += b; // operation
-//      (*dst) = creal(a);
-//      return cimag(a);
-// }
+// Example:
+
 // float kcaddf(float *dst, float areal, float aimag, float breal, float bimag)
 // {
 //      float complex a, b;
 //      a = CMPLXF(areal, aimag);
 //      b = CMPLXF(breal, bimag);
 //      a += b; // operation
-//      (*dst) = crealf(a);
-//      return cimagf(a);
+//      if (dst != NULL)
+//          (*dst) = cimagf(a);
+//      return crealf(a);
 // }
+// double kcadd(double *dst, double areal, double aimag, double breal, double bimag)
+// {
+//      double complex a, b;
+//      a = CMPLX(areal, aimag);
+//      b = CMPLX(breal, bimag);
+//      a += b; // operation
+//      if (dst != NULL)
+//          (*dst) = cimag(a);
+//      return creal(a);
+// }
+
+// Macros:
 
 #define KC_MACRO_2F(OP) \
     float complex a, b, c; \

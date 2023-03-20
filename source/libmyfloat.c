@@ -78,7 +78,7 @@ MY_DLL_API float katan2f(float a, float b) { return atan2f(a, b); }
 MY_DLL_API float kcbrtf(float a) { return cbrtf(a); }
 MY_DLL_API float kceilf(float a) { return ceilf(a); }
 MY_DLL_API float kcopysignf(float a, float b) { return copysignf(a, b); }
-MY_DLL_API float kerff(float a) { return erff(a); }
+MY_DLL_API float kerfj(float a) { return erff(a); }
 MY_DLL_API float kerfcf(float a) { return erfcf(a); }
 MY_DLL_API float kexp2f(float a) { return exp2f(a); }
 MY_DLL_API float kexpm1f(float a) { return expm1f(a); }
@@ -158,7 +158,7 @@ Classification macro / functions
 
 MY_DLL_API int kfpclassifyf(float a) { return (int)fpclassify(a); }
 MY_DLL_API int kisfinitef(float a) { return (int)isfinite(a); }
-MY_DLL_API int kisinff(float a) { return (int)isinf(a); }
+MY_DLL_API int kisinfj(float a) { return (int)isinf(a); }
 MY_DLL_API int kisnanf(float a) { return (int)isnan(a); }
 MY_DLL_API int kisnormalf(float a) { return (int)isnormal(a); }
 MY_DLL_API int ksignbitf(float a) { return (int)signbit(a); }
@@ -196,7 +196,7 @@ MY_DLL_API double kstrtod(const char * str, char ** endptr) { return strtod(str,
 
 // To String, from float or double:
 
-MY_DLL_API int ksnprintff(char * buffer, size_t sizeOfBuffer, const char * format, float a) { return snprintf(buffer, sizeOfBuffer, format, a); }
+MY_DLL_API int ksnprintfj(char * buffer, size_t sizeOfBuffer, const char * format, float a) { return snprintf(buffer, sizeOfBuffer, format, a); }
 MY_DLL_API int ksnprintfd(char * buffer, size_t sizeOfBuffer, const char * format, double a) { return snprintf(buffer, sizeOfBuffer, format, a); }
 
 /*

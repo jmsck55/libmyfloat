@@ -85,7 +85,7 @@ MY_DLL_API MY_EXTERN float katan2f(float a, float b);
 MY_DLL_API MY_EXTERN float kcbrtf(float a);
 MY_DLL_API MY_EXTERN float kceilf(float a);
 MY_DLL_API MY_EXTERN float kcopysignf(float a, float b);
-MY_DLL_API MY_EXTERN float kerff(float a);
+MY_DLL_API MY_EXTERN float kerfj(float a);
 MY_DLL_API MY_EXTERN float kerfcf(float a);
 MY_DLL_API MY_EXTERN float kexp2f(float a);
 MY_DLL_API MY_EXTERN float kexpm1f(float a);
@@ -166,7 +166,7 @@ Classification macro / functions
 
 MY_DLL_API MY_EXTERN int kfpclassifyf(float a);
 MY_DLL_API MY_EXTERN int kisfinitef(float a);
-MY_DLL_API MY_EXTERN int kisinff(float a);
+MY_DLL_API MY_EXTERN int kisinfj(float a);
 MY_DLL_API MY_EXTERN int kisnanf(float a);
 MY_DLL_API MY_EXTERN int kisnormalf(float a);
 MY_DLL_API MY_EXTERN int ksignbitf(float a);
@@ -204,7 +204,7 @@ MY_DLL_API MY_EXTERN double kstrtod(const char * str, char ** endptr);
 
 // To String, from float or double:
 
-MY_DLL_API MY_EXTERN int ksnprintff(char * buffer, size_t sizeOfBuffer, const char * format, float a);
+MY_DLL_API MY_EXTERN int ksnprintfj(char * buffer, size_t sizeOfBuffer, const char * format, float a);
 MY_DLL_API MY_EXTERN int ksnprintfd(char * buffer, size_t sizeOfBuffer, const char * format, double a);
 
 /*
