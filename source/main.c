@@ -11,7 +11,7 @@ int main()
     
     if (FloatVersion() != FLOAT_VERSION)
     {
-        printf("Error: Looking for libmyfloat.h version %lld, found %lld\n", FLOAT_VERSION, FloatVersion());
+        printf("Error: Looking for libmyfloat.h version %i, found %i\n", (int)FLOAT_VERSION, (int)FloatVersion());
         return 1;
     }
 

@@ -12,7 +12,7 @@ int main()
     
     if (ComplexVersion() != COMPLEX_VERSION)
     {
-        printf("Error: Looking for libmycomplex.h version %lld, found %lld\n", COMPLEX_VERSION, ComplexVersion());
+        printf("Error: Looking for libmycomplex.h version %i, found %i\n", (int)COMPLEX_VERSION, (int)ComplexVersion());
         return 1;
     }
 
