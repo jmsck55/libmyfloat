@@ -9,7 +9,7 @@ int main()
 {
     float a, b, c;
     
-    printf("Sizeof(*void) == %i\n", (int)sizeof(*void));
+    printf("Sizeof(void*) == %i\n", (int)sizeof(void*));
 
     if (FloatVersion() != FLOAT_VERSION)
     {

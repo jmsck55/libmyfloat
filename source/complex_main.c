@@ -10,7 +10,7 @@ int main()
     Complexf af, bf; //, cf, df;
     //Complex a, b, c, d;
     
-    printf("Sizeof(*void) == %i\n", (int)sizeof(*void));
+    printf("Sizeof(void*) == %i\n", (int)sizeof(void*));
 
     if (ComplexVersion() != COMPLEX_VERSION)
     {
