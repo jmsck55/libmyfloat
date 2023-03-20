@@ -10,6 +10,12 @@ int main()
     Complexf af, bf; //, cf, df;
     //Complex a, b, c, d;
     
+    if (ComplexVersion() != COMPLEX_VERSION)
+    {
+        printf("Error: Looking for libmycomplex.h version %lld, found %lld\n", COMPLEX_VERSION, ComplexVersion());
+        return 1;
+    }
+
     af.real = 1.0F;
     af.imag = -1.0F;
 

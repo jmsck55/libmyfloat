@@ -9,6 +9,12 @@ int main()
 {
     float a, b, c;
     
+    if (FloatVersion() != FLOAT_VERSION)
+    {
+        printf("Error: Looking for libmyfloat.h version %lld, found %lld\n", FLOAT_VERSION, FloatVersion());
+        return 1;
+    }
+
     a = 1.2;
     b = 3.4;
     
