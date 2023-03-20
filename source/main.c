@@ -9,6 +9,8 @@ int main()
 {
     float a, b, c;
     
+    printf("Sizeof(*void) == %i\n", (int)sizeof(*void));
+
     if (FloatVersion() != FLOAT_VERSION)
     {
         printf("Error: Looking for libmyfloat.h version %i, found %i\n", (int)FLOAT_VERSION, (int)FloatVersion());

@@ -10,6 +10,8 @@ int main()
     Complexf af, bf; //, cf, df;
     //Complex a, b, c, d;
     
+    printf("Sizeof(*void) == %i\n", (int)sizeof(*void));
+
     if (ComplexVersion() != COMPLEX_VERSION)
     {
         printf("Error: Looking for libmycomplex.h version %i, found %i\n", (int)COMPLEX_VERSION, (int)ComplexVersion());
