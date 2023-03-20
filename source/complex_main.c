@@ -9,17 +9,20 @@ int main()
 {
     Complexf af, bf; //, cf, df;
     //Complex a, b, c, d;
-    
+    puts("System:\n");
     #ifdef _MSC_VER
-        puts("MSVC Windows\n");
+        puts("MSVC Windows ");
+    #endif
+    #ifdef __aarch64__
+        puts("aarch64 ");
     #endif
     #ifdef __STDC__
-        puts("STDC\n");
+        puts("STDC ");
     #endif
     #ifdef __GNUC__
-        puts("GNUC\n");
+        puts("GNUC ");
     #endif
-    printf("Sizeof(void*) == %i\n", (int)sizeof(void*));
+    printf("Sizeof(void*) == %i\n\n", (int)sizeof(void*));
 
     if (ComplexVersion() != COMPLEX_VERSION)
     {

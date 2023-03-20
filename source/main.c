@@ -9,17 +9,21 @@ int main()
 {
     float a, b, c;
     
+    puts("System:\n");
     #ifdef _MSC_VER
-        puts("MSVC Windows\n");
+        puts("MSVC Windows ");
+    #endif
+    #ifdef __aarch64__
+        puts("aarch64 ");
     #endif
     #ifdef __STDC__
-        puts("STDC\n");
+        puts("STDC ");
     #endif
     #ifdef __GNUC__
-        puts("GNUC\n");
+        puts("GNUC ");
     #endif
-    printf("Sizeof(void*) == %i\n", (int)sizeof(void*));
-
+    printf("Sizeof(void*) == %i, long==%i, long double=%i\n", (int)sizeof(void*), (int)sizeof(long), (int)sizeof(long double));
+    printf("Library long==%i, long double==%i\n\n", SizeOfLong(), SizeOfLongDouble());
     if (FloatVersion() != FLOAT_VERSION)
     {
         printf("Error: Looking for libmyfloat.h version %i, found %i\n", (int)FLOAT_VERSION, (int)FloatVersion());
