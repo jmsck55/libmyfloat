@@ -22,7 +22,7 @@ int main()
     #ifdef __GNUC__
         puts("GNUC ");
     #endif
-    printf("Sizeof(void*) == %i, long==%i, long double=%i\n", (int)sizeof(void*), (int)sizeof(long), (int)sizeof(long double));
+    printf("Sizeof(void*) == %i, float==%i, double==%i, int==%i, long==%i, long double==%i\n", (int)sizeof(void*), (int)sizeof(float), (int)sizeof(double), (int)sizeof(int), (int)sizeof(long), (int)sizeof(long double));
     printf("Library long==%i, long double==%i\n\n", SizeOfLong(), SizeOfLongDouble());
     if (FloatVersion() != FLOAT_VERSION)
     {
