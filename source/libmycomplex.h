@@ -11,7 +11,11 @@
 #ifndef libmycomplex_h
 #define libmycomplex_h
 
+#include <stddef.h>
+
 #include "dllmacros.h"
+
+#define COMPLEX_VERSION 1LL
 
 // Useful typedef's:
 
@@ -31,6 +35,9 @@ typedef struct {
 extern "C" {
 #endif /* __cplusplus */
 
+// Library Version:
+
+MY_DLL_API MY_EXTERN long long ComplexVersion();
 
 // Complex Only functions:
 

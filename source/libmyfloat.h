@@ -15,12 +15,17 @@
 
 #include "dllmacros.h"
 
+#define FLOAT_VERSION 1LL
+
 // Code for "C" library:
 
 #ifdef __cplusplus
 extern "C" {
 #endif /* __cplusplus */
 
+// Library Version:
+
+MY_DLL_API MY_EXTERN long long FloatVersion();
 
 // Simple arithmetic:
 

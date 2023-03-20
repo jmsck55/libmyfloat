@@ -14,6 +14,11 @@
 
 #include "libmycomplex.h"
 
+MY_DLL_API long long ComplexVersion()
+{
+    return COMPLEX_VERSION;
+}
+
 // Macros for Complex data types:
 
 #ifndef CMPLX
@@ -47,30 +52,34 @@
     a = CMPLXF(areal, aimag); \
     b = CMPLXF(breal, bimag); \
     c = OP(a, b); \
-    (*dst) = crealf(c); \
-    return cimagf(c)
+    if (dst != NULL) \
+        (*dst) = cimagf(c); \
+    return crealf(c)
 
 #define KC_MACRO_2(OP) \
     double complex a, b, c; \
     a = CMPLX(areal, aimag); \
     b = CMPLX(breal, bimag); \
     c = OP(a, b); \
-    (*dst) = creal(c); \
-    return cimag(c)
+    if (dst != NULL) \
+        (*dst) = cimag(c); \
+    return creal(c)
 
 #define KC_MACRO_1F(OP) \
     float complex a, c; \
     a = CMPLXF(areal, aimag); \
     c = OP(a); \
-    (*dst) = crealf(c); \
-    return cimagf(c)
+    if (dst != NULL) \
+        (*dst) = cimagf(c); \
+    return crealf(c)
 
 #define KC_MACRO_1(OP) \
     double complex a, c; \
     a = CMPLX(areal, aimag); \
     c = OP(a); \
-    (*dst) = creal(c); \
-    return cimag(c)
+    if (dst != NULL) \
+        (*dst) = cimag(c); \
+    return creal(c)
 
 // Complex Only functions:
 

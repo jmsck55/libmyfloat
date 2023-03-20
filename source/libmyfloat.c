@@ -15,6 +15,11 @@
 
 #include "libmyfloat.h"
 
+MY_DLL_API long long FloatVersion()
+{
+    return FLOAT_VERSION;
+}
+
 // Simple arithmetic:
 
 MY_DLL_API float kaddf(float a, float b) { return a + b; }
