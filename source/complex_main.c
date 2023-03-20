@@ -10,6 +10,15 @@ int main()
     Complexf af, bf; //, cf, df;
     //Complex a, b, c, d;
     
+    #ifdef _MSC_VER
+        puts("MSVC Windows\n");
+    #endif
+    #ifdef __STDC__
+        puts("STDC\n");
+    #endif
+    #ifdef __GNUC__
+        puts("GNUC\n");
+    #endif
     printf("Sizeof(void*) == %i\n", (int)sizeof(void*));
 
     if (ComplexVersion() != COMPLEX_VERSION)

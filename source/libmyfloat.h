@@ -25,6 +25,8 @@ extern "C" {
 
 // Library Version:
 
+MY_DLL_API MY_EXTERN int SizeOfLong();
+MY_DLL_API MY_EXTERN int SizeOfLongDouble();
 MY_DLL_API MY_EXTERN long long FloatVersion();
 
 // Simple arithmetic:

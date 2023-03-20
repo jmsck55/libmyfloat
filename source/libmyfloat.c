@@ -15,6 +15,14 @@
 
 #include "libmyfloat.h"
 
+MY_DLL_API int SizeOfLong()
+{
+    return (int)sizeof(long); // __SIZEOF_LONG__
+}
+MY_DLL_API int SizeOfLongDouble()
+{
+    return (int)sizeof(long double); // __SIZEOF_LONG_DOUBLE__
+}
 MY_DLL_API long long FloatVersion()
 {
     return FLOAT_VERSION;

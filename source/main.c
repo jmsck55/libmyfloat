@@ -9,6 +9,15 @@ int main()
 {
     float a, b, c;
     
+    #ifdef _MSC_VER
+        puts("MSVC Windows\n");
+    #endif
+    #ifdef __STDC__
+        puts("STDC\n");
+    #endif
+    #ifdef __GNUC__
+        puts("GNUC\n");
+    #endif
     printf("Sizeof(void*) == %i\n", (int)sizeof(void*));
 
     if (FloatVersion() != FLOAT_VERSION)
