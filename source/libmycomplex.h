@@ -15,7 +15,7 @@
 
 #include "dllmacros.h"
 
-#define COMPLEX_VERSION 1LL
+#define COMPLEX_VERSION 3LL
 
 // Useful typedef's:
 
@@ -41,69 +41,69 @@ MY_DLL_API MY_EXTERN long long ComplexVersion();
 
 // Complex Only functions:
 
-MY_DLL_API MY_EXTERN float kcargf(float *dst, float areal, float aimag);
-MY_DLL_API MY_EXTERN float kconjf(float *dst, float areal, float aimag);
-MY_DLL_API MY_EXTERN float kcrealf(float *dst, float areal, float aimag);
-MY_DLL_API MY_EXTERN float kcimagf(float *dst, float areal, float aimag);
-MY_DLL_API MY_EXTERN float kcprojf(float *dst, float areal, float aimag);
+MY_DLL_API MY_EXTERN float acargf(float *dst, float areal, float aimag);
+MY_DLL_API MY_EXTERN float aconjf(float *dst, float areal, float aimag);
+MY_DLL_API MY_EXTERN float acrealf(float *dst, float areal, float aimag);
+MY_DLL_API MY_EXTERN float acimagf(float *dst, float areal, float aimag);
+MY_DLL_API MY_EXTERN float acprojf(float *dst, float areal, float aimag);
 
-MY_DLL_API MY_EXTERN double kcarg(double *dst, double areal, double aimag);
-MY_DLL_API MY_EXTERN double kconj(double *dst, double areal, double aimag);
-MY_DLL_API MY_EXTERN double kcreal(double *dst, double areal, double aimag);
-MY_DLL_API MY_EXTERN double kcimag(double *dst, double areal, double aimag);
-MY_DLL_API MY_EXTERN double kcproj(double *dst, double areal, double aimag);
+MY_DLL_API MY_EXTERN double acarg(double *dst, double areal, double aimag);
+MY_DLL_API MY_EXTERN double aconj(double *dst, double areal, double aimag);
+MY_DLL_API MY_EXTERN double acreal(double *dst, double areal, double aimag);
+MY_DLL_API MY_EXTERN double acimag(double *dst, double areal, double aimag);
+MY_DLL_API MY_EXTERN double acproj(double *dst, double areal, double aimag);
 
 // Simple arithmetic:
 
-MY_DLL_API MY_EXTERN float kcaddf(float *dst, float areal, float aimag, float breal, float bimag);
-MY_DLL_API MY_EXTERN float kcsubtractf(float *dst, float areal, float aimag, float breal, float bimag);
-MY_DLL_API MY_EXTERN float kcmultiplyf(float *dst, float areal, float aimag, float breal, float bimag);
-MY_DLL_API MY_EXTERN float kcdividef(float *dst, float areal, float aimag, float breal, float bimag);
-MY_DLL_API MY_EXTERN float kcnegatef(float *dst, float areal, float aimag, float breal, float bimag);
+MY_DLL_API MY_EXTERN float acaddf(float *dst, float areal, float aimag, float breal, float bimag);
+MY_DLL_API MY_EXTERN float acsubtractf(float *dst, float areal, float aimag, float breal, float bimag);
+MY_DLL_API MY_EXTERN float acmultiplyf(float *dst, float areal, float aimag, float breal, float bimag);
+MY_DLL_API MY_EXTERN float acdividef(float *dst, float areal, float aimag, float breal, float bimag);
+MY_DLL_API MY_EXTERN float acnegatef(float *dst, float areal, float aimag);
 
-MY_DLL_API MY_EXTERN double kcadd(double *dst, double areal, double aimag, double breal, double bimag);
-MY_DLL_API MY_EXTERN double kcsubtract(double *dst, double areal, double aimag, double breal, double bimag);
-MY_DLL_API MY_EXTERN double kcmultiply(double *dst, double areal, double aimag, double breal, double bimag);
-MY_DLL_API MY_EXTERN double kcdivide(double *dst, double areal, double aimag, double breal, double bimag);
-MY_DLL_API MY_EXTERN double kcnegate(double *dst, double areal, double aimag, double breal, double bimag);
+MY_DLL_API MY_EXTERN double acadd(double *dst, double areal, double aimag, double breal, double bimag);
+MY_DLL_API MY_EXTERN double acsubtract(double *dst, double areal, double aimag, double breal, double bimag);
+MY_DLL_API MY_EXTERN double acmultiply(double *dst, double areal, double aimag, double breal, double bimag);
+MY_DLL_API MY_EXTERN double acdivide(double *dst, double areal, double aimag, double breal, double bimag);
+MY_DLL_API MY_EXTERN double acnegate(double *dst, double areal, double aimag);
 
 // Complex functions:
 
-MY_DLL_API MY_EXTERN float kcabsf(float *dst, float areal, float aimag);
-MY_DLL_API MY_EXTERN float kcexpf(float *dst, float areal, float aimag);
-MY_DLL_API MY_EXTERN float kclogf(float *dst, float areal, float aimag);
-MY_DLL_API MY_EXTERN float kcpowf(float *dst, float areal, float aimag, float breal, float bimag);
-MY_DLL_API MY_EXTERN float kcsqrtf(float *dst, float areal, float aimag);
-MY_DLL_API MY_EXTERN float kcsinf(float *dst, float areal, float aimag);
-MY_DLL_API MY_EXTERN float kccosf(float *dst, float areal, float aimag);
-MY_DLL_API MY_EXTERN float kctanf(float *dst, float areal, float aimag);
-MY_DLL_API MY_EXTERN float kcasinf(float *dst, float areal, float aimag);
-MY_DLL_API MY_EXTERN float kcacosf(float *dst, float areal, float aimag);
-MY_DLL_API MY_EXTERN float kcatanf(float *dst, float areal, float aimag);
-MY_DLL_API MY_EXTERN float kcsinhf(float *dst, float areal, float aimag);
-MY_DLL_API MY_EXTERN float kccoshf(float *dst, float areal, float aimag);
-MY_DLL_API MY_EXTERN float kctanhf(float *dst, float areal, float aimag);
-MY_DLL_API MY_EXTERN float kcasinhf(float *dst, float areal, float aimag);
-MY_DLL_API MY_EXTERN float kcacoshf(float *dst, float areal, float aimag);
-MY_DLL_API MY_EXTERN float kcatanhf(float *dst, float areal, float aimag);
+MY_DLL_API MY_EXTERN float acabsf(float *dst, float areal, float aimag);
+MY_DLL_API MY_EXTERN float acexpf(float *dst, float areal, float aimag);
+MY_DLL_API MY_EXTERN float aclogf(float *dst, float areal, float aimag);
+MY_DLL_API MY_EXTERN float acpowf(float *dst, float areal, float aimag, float breal, float bimag);
+MY_DLL_API MY_EXTERN float acsqrtf(float *dst, float areal, float aimag);
+MY_DLL_API MY_EXTERN float acsinf(float *dst, float areal, float aimag);
+MY_DLL_API MY_EXTERN float accosf(float *dst, float areal, float aimag);
+MY_DLL_API MY_EXTERN float actanf(float *dst, float areal, float aimag);
+MY_DLL_API MY_EXTERN float acasinf(float *dst, float areal, float aimag);
+MY_DLL_API MY_EXTERN float acacosf(float *dst, float areal, float aimag);
+MY_DLL_API MY_EXTERN float acatanf(float *dst, float areal, float aimag);
+MY_DLL_API MY_EXTERN float acsinhf(float *dst, float areal, float aimag);
+MY_DLL_API MY_EXTERN float accoshf(float *dst, float areal, float aimag);
+MY_DLL_API MY_EXTERN float actanhf(float *dst, float areal, float aimag);
+MY_DLL_API MY_EXTERN float acasinhf(float *dst, float areal, float aimag);
+MY_DLL_API MY_EXTERN float acacoshf(float *dst, float areal, float aimag);
+MY_DLL_API MY_EXTERN float acatanhf(float *dst, float areal, float aimag);
 
-MY_DLL_API MY_EXTERN double kcabs(double *dst, double areal, double aimag);
-MY_DLL_API MY_EXTERN double kcexp(double *dst, double areal, double aimag);
-MY_DLL_API MY_EXTERN double kclog(double *dst, double areal, double aimag);
-MY_DLL_API MY_EXTERN double kcpow(double *dst, double areal, double aimag, double breal, double bimag);
-MY_DLL_API MY_EXTERN double kcsqrt(double *dst, double areal, double aimag);
-MY_DLL_API MY_EXTERN double kcsin(double *dst, double areal, double aimag);
-MY_DLL_API MY_EXTERN double kccos(double *dst, double areal, double aimag);
-MY_DLL_API MY_EXTERN double kctan(double *dst, double areal, double aimag);
-MY_DLL_API MY_EXTERN double kcasin(double *dst, double areal, double aimag);
-MY_DLL_API MY_EXTERN double kcacos(double *dst, double areal, double aimag);
-MY_DLL_API MY_EXTERN double kcatan(double *dst, double areal, double aimag);
-MY_DLL_API MY_EXTERN double kcsinh(double *dst, double areal, double aimag);
-MY_DLL_API MY_EXTERN double kccosh(double *dst, double areal, double aimag);
-MY_DLL_API MY_EXTERN double kctanh(double *dst, double areal, double aimag);
-MY_DLL_API MY_EXTERN double kcasinh(double *dst, double areal, double aimag);
-MY_DLL_API MY_EXTERN double kcacosh(double *dst, double areal, double aimag);
-MY_DLL_API MY_EXTERN double kcatanh(double *dst, double areal, double aimag);
+MY_DLL_API MY_EXTERN double acabs(double *dst, double areal, double aimag);
+MY_DLL_API MY_EXTERN double acexp(double *dst, double areal, double aimag);
+MY_DLL_API MY_EXTERN double aclog(double *dst, double areal, double aimag);
+MY_DLL_API MY_EXTERN double acpow(double *dst, double areal, double aimag, double breal, double bimag);
+MY_DLL_API MY_EXTERN double acsqrt(double *dst, double areal, double aimag);
+MY_DLL_API MY_EXTERN double acsin(double *dst, double areal, double aimag);
+MY_DLL_API MY_EXTERN double accos(double *dst, double areal, double aimag);
+MY_DLL_API MY_EXTERN double actan(double *dst, double areal, double aimag);
+MY_DLL_API MY_EXTERN double acasin(double *dst, double areal, double aimag);
+MY_DLL_API MY_EXTERN double acacos(double *dst, double areal, double aimag);
+MY_DLL_API MY_EXTERN double acatan(double *dst, double areal, double aimag);
+MY_DLL_API MY_EXTERN double acsinh(double *dst, double areal, double aimag);
+MY_DLL_API MY_EXTERN double accosh(double *dst, double areal, double aimag);
+MY_DLL_API MY_EXTERN double actanh(double *dst, double areal, double aimag);
+MY_DLL_API MY_EXTERN double acasinh(double *dst, double areal, double aimag);
+MY_DLL_API MY_EXTERN double acacosh(double *dst, double areal, double aimag);
+MY_DLL_API MY_EXTERN double acatanh(double *dst, double areal, double aimag);
 
 
 #ifdef __cplusplus
