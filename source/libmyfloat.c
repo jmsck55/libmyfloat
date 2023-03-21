@@ -49,15 +49,15 @@ MY_DLL_API float aexpf(float a) { return expf(a); }
 MY_DLL_API float alogf(float a) { return logf(a); }
 MY_DLL_API float apowf(float a, float b) { return powf(a, b); }
 MY_DLL_API float asqrtf(float a) { return sqrtf(a); }
-MY_DLL_API float asinf(float a) { return sinf(a); }
-MY_DLL_API float acosf(float a) { return cosf(a); }
-MY_DLL_API float atanf(float a) { return tanf(a); }
+MY_DLL_API float bsinf(float a) { return sinf(a); }
+MY_DLL_API float bcosf(float a) { return cosf(a); }
+MY_DLL_API float btanf(float a) { return tanf(a); }
 MY_DLL_API float aasinf(float a) { return asinf(a); }
 MY_DLL_API float aacosf(float a) { return acosf(a); }
 MY_DLL_API float aatanf(float a) { return atanf(a); }
-MY_DLL_API float asinhf(float a) { return sinhf(a); }
-MY_DLL_API float acoshf(float a) { return coshf(a); }
-MY_DLL_API float atanhf(float a) { return tanhf(a); }
+MY_DLL_API float bsinhf(float a) { return sinhf(a); }
+MY_DLL_API float bcoshf(float a) { return coshf(a); }
+MY_DLL_API float btanhf(float a) { return tanhf(a); }
 MY_DLL_API float aasinhf(float a) { return asinhf(a); }
 MY_DLL_API float aacoshf(float a) { return acoshf(a); }
 MY_DLL_API float aatanhf(float a) { return atanhf(a); }
@@ -67,15 +67,15 @@ MY_DLL_API double aexp(double a) { return exp(a); }
 MY_DLL_API double alog(double a) { return log(a); }
 MY_DLL_API double apow(double a, double b) { return pow(a, b); }
 MY_DLL_API double asqrt(double a) { return sqrt(a); }
-MY_DLL_API double asin(double a) { return sin(a); }
-MY_DLL_API double acos(double a) { return cos(a); }
-MY_DLL_API double atan(double a) { return tan(a); }
+MY_DLL_API double bsin(double a) { return sin(a); }
+MY_DLL_API double bcos(double a) { return cos(a); }
+MY_DLL_API double btan(double a) { return tan(a); }
 MY_DLL_API double aasin(double a) { return asin(a); }
 MY_DLL_API double aacos(double a) { return acos(a); }
 MY_DLL_API double aatan(double a) { return atan(a); }
-MY_DLL_API double asinh(double a) { return sinh(a); }
-MY_DLL_API double acosh(double a) { return cosh(a); }
-MY_DLL_API double atanh(double a) { return tanh(a); }
+MY_DLL_API double bsinh(double a) { return sinh(a); }
+MY_DLL_API double bcosh(double a) { return cosh(a); }
+MY_DLL_API double btanh(double a) { return tanh(a); }
 MY_DLL_API double aasinh(double a) { return asinh(a); }
 MY_DLL_API double aacosh(double a) { return acosh(a); }
 MY_DLL_API double aatanh(double a) { return atanh(a); }
