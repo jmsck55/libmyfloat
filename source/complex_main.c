@@ -9,6 +9,7 @@ int main()
 {
     Complexf af, bf; //, cf, df;
     //Complex a, b, c, d;
+    printf("Complex Library Version: %i\n", (int)ComplexVersion());
     puts("System:\n");
     #ifdef _MSC_VER
         puts("MSVC Windows ");
