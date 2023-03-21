@@ -9,6 +9,7 @@ int main()
 {
     float a, b, c;
     
+    printf("Float Library Version: %i\n", (int)FloatVersion());
     puts("System:\n");
     #ifdef _MSC_VER
         puts("MSVC Windows ");
@@ -23,7 +24,7 @@ int main()
         puts("GNUC ");
     #endif
     printf("Sizeof(void*) == %i, float==%i, double==%i, int==%i, long==%i, long double==%i\n", (int)sizeof(void*), (int)sizeof(float), (int)sizeof(double), (int)sizeof(int), (int)sizeof(long), (int)sizeof(long double));
-    printf("Library long==%i, long double==%i\n\n", SizeOfLong(), SizeOfLongDouble());
+    printf("Library long==%i, long double==%i\n\n", (int)SizeOfLong(), (int)SizeOfLongDouble());
     if (FloatVersion() != FLOAT_VERSION)
     {
         printf("Error: Looking for libmyfloat.h version %i, found %i\n", (int)FLOAT_VERSION, (int)FloatVersion());
@@ -33,13 +34,13 @@ int main()
     a = 1.2;
     b = 3.4;
     
-    c = kaddf(a, b);
+    c = aaddf(a, b);
     
-    printf("kaddf() returns: %f\n", c);
+    printf("aaddf() returns: %f\n", c);
     
     a = 1234;
-    b = klogf(a);
-    c = kexpf(b);
+    b = alogf(a);
+    c = aexpf(b);
 
     printf("%f == %f\n", (double)a, (double)c);
     puts("Press Enter to continue.\n");
