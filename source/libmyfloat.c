@@ -40,7 +40,7 @@ MY_DLL_API double aadd(double a, double b) { return a + b; }
 MY_DLL_API double asubtract(double a, double b) { return a - b; }
 MY_DLL_API double amultiply(double a, double b) { return a * b; }
 MY_DLL_API double adivide(double a, double b) { return a / b; }
-MY_DLL_API double anegate(double a, double b) { return - a; }
+MY_DLL_API double anegate(double a) { return - a; }
 
 // Real functions:
 

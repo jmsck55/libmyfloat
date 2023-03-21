@@ -41,7 +41,7 @@ MY_DLL_API MY_EXTERN double aadd(double a, double b);
 MY_DLL_API MY_EXTERN double asubtract(double a, double b);
 MY_DLL_API MY_EXTERN double amultiply(double a, double b);
 MY_DLL_API MY_EXTERN double adivide(double a, double b);
-MY_DLL_API MY_EXTERN double anegate(double a, double b);
+MY_DLL_API MY_EXTERN double anegate(double a);
 
 // Real functions:
 
