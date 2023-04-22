@@ -1,10 +1,9 @@
 # libmyfloat
 Library for floating point numbers
 
-It uses "float" as its datatype for numerical operations.
+It uses "float", "double", and "quad" as its datatypes for numerical operations.
 
 Using "float" can be faster than "double", but is less accurate.
-
 
 On x86_64 and compatible computers:
 
